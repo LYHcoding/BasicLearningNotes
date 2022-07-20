@@ -1,0 +1,15 @@
+﻿属性,名称,数据,作用
+class_weight,各类权重,"1. ndarray，一维数组，(n_classes, )",1. 用来获取模型对各个类别设置的权重，与参数中的class_weight相关2. 数组长度为类别数，内容为每个类的权重
+classes_,类别,"1. ndarray，一维数组 ，(n_classes, )",1. 用来获取各个类别的标签  2. 数组的长度为类别数，内容为每个类对应的标签
+coef_,特征权重向量,"1. ndarray，二维数组，(n_classes * (n_classes - 1) / 2, n_features)",1. 获取特征权重向量  2. 当核函数为linear时，才可以调用这一属性
+dual_coef_,对偶系数,"1. ndarray，二维数组，(n_classes -1, n_SV)",1. decision_funciton 中的支持向量的对偶系数  2. n_SV 为支持向量的个数  3. 所有 ovo 分类器的系数
+fit_status_,拟合状态,1. int类型,1. 拟合成功0， 否则为1，进行告警
+intercept_,决策函数常量,"1. ndarray，一维数组， (n_classes * (n_classes - 1) / 2, )",1. decision_funciton 中的常量
+n_features_in_,特征数量,1. int类型,1. 拟合过程中使用到的特征数量
+feature_names_in_,特征名称,"1. ndarray，一维数组，(n_features_in_,)",1. 获取拟合时特征的名称
+support_,支持向量索引,1. ndarray，一维数组， (n_SV，),1. 获取模型拟合后获得的所有支持向量的索引
+support_vectors_,支持向量,"1. ndarray，二维数组，(n_SV, n_features)",1. 获取所有的支持向量
+n_support_,每类的支持向量数,"1. ndarray，一维数组 ，(n_classes,), dtype=int32",1. 获取每种类别的支持向量数
+probA_,platt scaling系数A,"1. ndarray， 一维数组， (n_classes * (n_classes - 1) / 2, )",1. 只有当 probability=True.时，这一系数A才会被计算 ，probability=False，则为空数组。
+probB_,platt scaling纠正项B,"1. ndarray， 一维数组， (n_classes * (n_classes - 1) / 2, )",1. 只有当 probability=True.时，这一纠正项B才会被计算，probability=False，则为空数组。
+shape_fit_,训练向量维度数,"1.元组，(n_dimensions_of_X,)",1. 训练向量X的数组维度
